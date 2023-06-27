@@ -9,5 +9,5 @@ from chatbot_live.udfs.UDFs import *
 
 def only_user_msgs(spark: SparkSession, Script_1: DataFrame) -> DataFrame:
     return Script_1.filter(
-        (col("value_parsed").isNotNull() & (col("value_parsed.payload.event.user") != lit("U05AU1K4ELV")))
+        (col("value_parsed").isNotNull() & (col("value_parsed.payload.event.user") != lit("U05EH3NT8BV")))
     )

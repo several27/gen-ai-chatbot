@@ -16,4 +16,4 @@ def index_urls(spark: SparkSession) -> DataFrame:
             StructField("changefreq", StringType(), True), StructField("loc", StringType(), True), StructField("priority", DoubleType(), True)
         ])
         )\
-        .load("dbfs:/prophecy_data/web/bronze/sitemap/")
+        .load("dbfs:/dais_gen_ai/web/bronze/sitemap/")

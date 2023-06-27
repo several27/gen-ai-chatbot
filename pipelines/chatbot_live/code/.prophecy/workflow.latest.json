@@ -2,7 +2,7 @@
   "metainfo" : {
     "id" : "1",
     "language" : "python",
-    "fabricId" : "1777",
+    "fabricId" : "2929",
     "frontEndLanguage" : "sql",
     "mode" : "stream",
     "udfs" : {
@@ -508,10 +508,10 @@
         "isCustomOutputSchema" : false
       },
       "properties" : {
-        "columnsSelector" : [ "pY_SW15p-BRn64MvRkJ0x$$CaxhduG_vmyAS8h6Rwz7Y##value_parsed.payload.event", "pY_SW15p-BRn64MvRkJ0x$$CaxhduG_vmyAS8h6Rwz7Y##value_parsed.payload", "pY_SW15p-BRn64MvRkJ0x$$CaxhduG_vmyAS8h6Rwz7Y##value_parsed.payload.event.user", "pY_SW15p-BRn64MvRkJ0x$$CaxhduG_vmyAS8h6Rwz7Y##value_parsed" ],
+        "columnsSelector" : [ "Kzg8vCV1NW5VZdx3CF8Ou$$P9_92B44k71HE7AY1AjR5##value_parsed.payload", "Kzg8vCV1NW5VZdx3CF8Ou$$P9_92B44k71HE7AY1AjR5##value_parsed.payload.event", "Kzg8vCV1NW5VZdx3CF8Ou$$P9_92B44k71HE7AY1AjR5##value_parsed.payload.event.user", "Kzg8vCV1NW5VZdx3CF8Ou$$P9_92B44k71HE7AY1AjR5##value_parsed" ],
         "condition" : {
           "format" : "sql",
-          "expression" : "value_parsed is not null and value_parsed.payload.event.user != 'U05AU1K4ELV'"
+          "expression" : "value_parsed is not null and value_parsed.payload.event.user != 'U05EH3NT8BV'"
         }
       }
     },
@@ -1762,7 +1762,7 @@
         "isCustomOutputSchema" : true
       },
       "properties" : {
-        "index_name" : "all-vectors",
+        "index_name" : "maciej-index",
         "credential_type" : "databricks",
         "credential_db_scope" : "pinecone",
         "environment" : "us-east-1-aws",

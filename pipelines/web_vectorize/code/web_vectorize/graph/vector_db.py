@@ -20,7 +20,7 @@ def vector_db(spark: SparkSession, web_silver_content_vectorized_1: DataFrame):
             .withColumn("_id_vector", struct(col("id"), col("embedding").alias("vector")))\
             .groupBy(col("_group_num"))\
             .agg(collect_list(col("_id_vector")).alias("id_vectors"))\
-            .withColumn("upserted", expr(f"pinecone_upsert(\"all-vectors\", id_vectors)"))\
+            .withColumn("upserted", expr(f"pinecone_upsert(\"maciej-index\", id_vectors)"))\
             .select(col("*"), col("upserted.*"))\
             .select(col("id_vectors"), col("count"), col("error"))\
             .write\
@@ -33,7 +33,7 @@ def vector_db(spark: SparkSession, web_silver_content_vectorized_1: DataFrame):
             .withColumn("_id_vector", struct(col("id"), col("embedding").alias("vector")))\
             .groupBy(col("_group_num"))\
             .agg(collect_list(col("_id_vector")).alias("id_vectors"))\
-            .withColumn("upserted", expr(f"pinecone_upsert(\"all-vectors\", id_vectors)"))\
+            .withColumn("upserted", expr(f"pinecone_upsert(\"maciej-index\", id_vectors)"))\
             .select(col("*"), col("upserted.*"))\
             .select(col("id_vectors"), col("count"), col("error"))\
             .write\

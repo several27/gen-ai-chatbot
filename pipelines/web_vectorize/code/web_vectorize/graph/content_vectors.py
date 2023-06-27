@@ -13,4 +13,4 @@ def content_vectors(spark: SparkSession, vectorize: DataFrame):
         .option("mergeSchema", True)\
         .option("overwriteSchema", True)\
         .mode("overwrite")\
-        .saveAsTable(f"gen_ai.web_silver.content_vectorized")
+        .saveAsTable(f"dais_gen_ai.web_silver.content_vectorized")
